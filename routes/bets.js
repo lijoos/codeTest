@@ -84,7 +84,7 @@ router.get('/customerRisk', function (req, res) {
         $sum: { $cond: [{ $gt: ['$win', 0] }, 1, 0] },
       },
        avgStake: {
-            $avg: "$Stake"
+            $avg: "$stake"
       },
       total: { $sum: 1 },
     },
