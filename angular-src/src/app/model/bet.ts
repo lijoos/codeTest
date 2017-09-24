@@ -2,7 +2,7 @@ export class BetTable{
     customer: Number;
     event: boolean;
     participant:Number;
-    Stake:Number;
+    stake:Number;
     win:Number;
     isUnusual:boolean;
     isHighStake:boolean;
