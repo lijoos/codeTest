@@ -16,13 +16,17 @@ export class BetComponent implements OnInit {
  
 
 
-  notifyMe() {
-    
+ 
+ ngOnChanges(changes) {
+    console.log("changed");
     this.startindex=0;
+    this.endindex=10;
   }
     ngOnInit() {
+      this.startindex=0;
+    this.endindex=10;
      
-      console.log("AsasasadaD");
+     
       // this.startindex=0;
        this.onPreviousClick();
     }
