@@ -1,0 +1,75 @@
+<div>
+
+<div >
+  <h1>Settled Bet History</h1>
+      <ul class="nav navbar-nav" data-toggle="collapse" data-target=".navbar-collapse">
+        <li  class="dropdown">
+          <a  href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{{dropdownvalue1}}<span class="caret"></span></a>
+          <ul class="dropdown-menu" >
+            <li *ngFor="let win of winRate"><a  (click)="onSelected(win.customer)">{{win.customer}}</a></li>
+            
+          </ul>
+        </li>
+      </ul>
+<div >
+  
+<input type="button" class="btn btn-primary" (click)="showAllBets()" value="Show All">
+
+  
+   <app-bet [bets]="betsSettled"></app-bet>
+
+
+</div>
+
+<div>
+<div >
+  <h1>Winning Rate</h1>
+      <table class="table table-striped table-bordered" style="width:40%">
+  <thead>
+    <tr>
+      <th>Customer</th>
+       <th>Winiing Percentage</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let win of winRate">
+     
+      <td>{{win.customer}}</td>
+      <td *ngIf="win.winPer < 60">{{win.winPer}}%</td>
+      <td *ngIf="win.winPer>=60" style="background-color:#1999FD;color: white;">{{win.winPer}}%</td>
+    </tr>
+   
+  </tbody>
+</table>
+<div >
+
+
+<div >
+  <h1>Current Bet Data </h1>
+      <ul class="nav navbar-nav" data-toggle="collapse" data-target=".navbar-collapse">
+        <li  class="dropdown">
+          <a  href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{{dropdownvalue2}}<span class="caret"></span></a>
+          <ul class="dropdown-menu" >
+            <li *ngFor="let win of winRate"><a  (click)="onSelectedUnsettled(win.customer)">{{win.customer}}</a></li>
+            
+          </ul>
+        </li>
+      </ul>
+       
+<div >
+  
+<input type="button" class="btn btn-primary" (click)="showAllBetsUnsettled()" value="Show All">
+
+<input type="button" class="btn  unusual" value="Unusual">
+
+  <input type="button" class="btn highBet"  value="High Bet Stake">
+
+  <input type="button" class="btn veryHighBet"  value="Very High Bet Stake">
+  <input type="button" class="btn Bet1000"  value="Bet Greater than $1000">
+   <app-bet [bets]="betsUnSettled" [startindex]="startindex" [endindex]="endindex"></app-bet>
+
+
+</div>
+
+
+

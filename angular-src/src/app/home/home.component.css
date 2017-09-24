@@ -1,0 +1,26 @@
+.sizeofDiv{
+    width: 70%
+}
+
+.btn{
+    margin: 17px;
+     background-color:#1999FD;
+}
+
+.unusual{
+    background-color:#1999FD;
+    color: white;
+}
+.highBet{
+    background-color:	#FD9608;
+    color: white;
+}
+.veryHighBet{
+    background-color:	#F93932;
+     color: white;
+
+}
+.Bet1000{
+    background-color:pink;
+     color: black;
+}

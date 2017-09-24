@@ -1,0 +1,32 @@
+<table class="table  table-bordered">
+  <thead>
+    <tr>
+      <th>NO</th>
+      <th style="width:10%">Customer</th>
+      <th>Event</th>
+      <th>Participant</th>
+       <th>Stake</th>
+       <th>Win</th>
+     
+    </tr>
+  </thead>
+  <tbody> 
+    <tr *ngFor="let bet of bets |slice:startindex:endindex let i = index" 
+     [ngClass]="{highBet:(bet.isHighStake===true),
+                 unusual:(bet.isUnusual===true),
+                 veryHighBet:(bet.isVeryHighStake===true)
+                 }" >
+      <th scope="row">{{startindex+i+1}}</th>
+      <td >{{bet.customer}}</td>
+      <td>{{bet.event}}</td>
+      <td>{{bet.participant}}</td>
+      <td   >{{bet.Stake}}</td>
+
+     <td [ngClass]="{Bet1000:(bet.win>999 && bet.isUnSettled)}">{{bet.win}}</td>
+      
+    </tr>
+  <tr> <a href="#" class="previous" (click)="onPreviousClick()">&laquo; Previous</a>
+      
+    <a href="#" class="next" (click)="onNextClick()">Next &raquo;</a></tr>
+  </tbody>
+</table>

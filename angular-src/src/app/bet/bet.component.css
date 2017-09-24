@@ -1,0 +1,18 @@
+.unusual{
+    background-color:#1999FD;
+    border-style: solid;
+    color: white;
+}
+.highBet{
+    background-color:	#FD9608;
+    color: white;
+}
+.veryHighBet{
+    background-color:	#F93932;
+     color: white;
+
+}
+.Bet1000{
+    background-color:pink;
+     color: black;
+}
